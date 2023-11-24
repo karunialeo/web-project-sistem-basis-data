@@ -1,5 +1,8 @@
 import { lazy } from 'react';
 
+import StudentPage from '../pages/Student';
+import TeacherPage from '../pages/Teacher';
+
 const Calendar = lazy(() => import('../pages/Calendar'));
 const Chart = lazy(() => import('../pages/Chart'));
 const FormElements = lazy(() => import('../pages/Form/FormElements'));
@@ -11,6 +14,56 @@ const Alerts = lazy(() => import('../pages/UiElements/Alerts'));
 const Buttons = lazy(() => import('../pages/UiElements/Buttons'));
 
 const coreRoutes = [
+  {
+    path: '/student-list',
+    title: 'Daftar Siswa',
+    component: StudentPage,
+  },
+  {
+    path: '/teacher-list',
+    title: 'Daftar Guru',
+    component: TeacherPage,
+  },
+  {
+    path: '/class-schedule',
+    title: 'Jadwal Pelajaran',
+    component: TeacherPage,
+  },
+  {
+    path: '/class-attendance',
+    title: 'Kehadiran Siswa/Guru',
+    component: TeacherPage,
+  },
+  {
+    path: '/student-marks',
+    title: 'Nilai Siswa',
+    component: TeacherPage,
+  },
+  {
+    path: '/inventory-list',
+    title: 'Daftar Inventaris',
+    component: TeacherPage,
+  },
+  {
+    path: '/classrooms',
+    title: 'Ruangan Kelas',
+    component: TeacherPage,
+  },
+  {
+    path: '/resource-borrowing',
+    title: 'Peminjaman Alat/Barang',
+    component: TeacherPage,
+  },
+  {
+    path: '/user-list',
+    title: 'Daftar Pengguna',
+    component: TeacherPage,
+  },
+
+  // unused
+  // unused
+  // unused
+
   {
     path: '/calendar',
     title: 'Calender',
